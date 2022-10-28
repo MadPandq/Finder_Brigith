@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Finder</string>
+    <string name="register_button">No tienes cuenta?<b> Registrate Aquí</b></string>
+    //Headings
+    <string name="heading_one">Bienvenido/a</string>
+    <string name="heading_two">Ubicación</string>
+    <string name="heading_three">Ayudémonos</string>
+    <string name="heading_fourth">Conviértete en un Finder</string>
+
+    //Descripción
+    <string name="desc_one">Finder es una aplicación que promueve la búsqueda de Personas</string>
+    <string name="desc_two">Podrás ver las ubicaciones recientes de personas con las mismas características de quien estés buscando</string>
+    <string name="desc_three">Con solo subir una descripción y fotos, ayudarás a que muchas familias se reencuentren</string>
+    <string name="desc_fourth">Una pequeña contribución puede hacer un gran cambio, disfruta de tu estancia en Finder. </string>
+</resources>
