@@ -62,7 +62,7 @@
 
 
         <Button
-            android:id="@+id/btnFinder"
+            android:id="@+id/btnFind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -71,7 +71,7 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btnFind"
+            android:id="@+id/btnFinder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
