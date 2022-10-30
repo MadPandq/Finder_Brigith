@@ -22,4 +22,7 @@
     <string name="des5">Nombre: Hannah Montana, su ubicación fue en metro Patronato afuera de la Vega Central.</string>
     <string name="descripcionDefi">Nombre: Celeste Rodriguez, fue vista por ultima ves en metro los Héroes cerca al establecimiento de comida "Burger King". </string>
     <string name="des6">Nombre: Camila Cabello, fue vista en Independencia caminando en dirección hacia la comuna de Recoleta, vestía de negro.</string>
+
+    <string name="mapbox_access_token">pk.eyJ1IjoibWFkcGFuZGEwNCIsImEiOiJjbDl1c2VtN2cwMXlkM29sczM0c3Z6YnRpIn0.woaQb0hjE8EL82w0nsy7wA</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

@@ -2,12 +2,16 @@ package com.example.finder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class FindActivity extends AppCompatActivity {
 
@@ -15,13 +19,22 @@ public class FindActivity extends AppCompatActivity {
     Sensor sensor;
     SensorEventListener sensorEventListener;
     int whip=0;
+    TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find);
+        text=(TextView) findViewById(R.id.txtAna);
         sensorManager=(SensorManager)getSystemService(SENSOR_SERVICE);
         sensor=sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+
+        text.setOnClickListener(view -> {
+            Intent e = new Intent(FindActivity.this, AnaActivity.class);
+            startActivity(e);
+        });
+
+
         if(sensor==null)
         {finish();}
 
@@ -45,5 +58,11 @@ public class FindActivity extends AppCompatActivity {
 
             }
         };
+
+
     }
+
+
+
+
 }
