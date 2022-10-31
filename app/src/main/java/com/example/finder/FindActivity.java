@@ -8,49 +8,53 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.util.Log;
+import android.view.Gravity;
+import android.widget.Button;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class FindActivity extends AppCompatActivity {
 
-    SensorManager sensorManager;
-    Sensor sensor;
-    SensorEventListener sensorEventListener;
-    int whip=0;
-    TextView text;
+    private SensorManager sensorManager;
+    private Sensor proximitySensor;
+    private SensorEventListener proximitySensorListener;
+    Button boton, botonDos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find);
-        text=(TextView) findViewById(R.id.txtAna);
-        sensorManager=(SensorManager)getSystemService(SENSOR_SERVICE);
-        sensor=sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-        text.setOnClickListener(view -> {
-            Intent e = new Intent(FindActivity.this, AnaActivity.class);
+        sensorManager=(SensorManager)getSystemService(SENSOR_SERVICE);
+        boton = findViewById(R.id.btnUno);
+        botonDos = findViewById(R.id.btnDos);
+
+        boton.setOnClickListener(view -> {
+            Intent e = new Intent(this, AnitaActivity.class);
             startActivity(e);
         });
 
+        botonDos.setOnClickListener(view -> {
+            Intent e = new Intent(this, LuisaActivity.class);
+            startActivity(e);
+        });
 
-        if(sensor==null)
-        {finish();}
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
-        sensorEventListener=new SensorEventListener() {
+        proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        if(proximitySensor == null) {
+            Log.e("TAG", "El sensor de proximidad no está disponible.");
+            finish();
+        }
+        proximitySensorListener = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
-                float x=sensorEvent.values[0];
-                System.out.println("valor giro"+x);
-                if(x<-5 && whip==0){
-                    whip++;
-                    Toast.makeText(FindActivity.this, "No muevas mucho el celular", Toast.LENGTH_SHORT).show();
+                if(sensorEvent.values[0] >= proximitySensor.getMaximumRange()) {
+                    String mensaje = "Hey, cuidado con presionar tan rápido y cerca, hay un sensor vigilando";
+                    Toast toast = Toast.makeText(FindActivity.this, mensaje, Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 90, 0);
+                    toast.show();
                 }
-                else if(x>5 && whip==1){
-                    Toast.makeText(FindActivity.this, "No muevas mucho el celular", Toast.LENGTH_SHORT).show();
-                }
-
             }
 
             @Override
@@ -61,6 +65,19 @@ public class FindActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sensorManager.registerListener(proximitySensorListener, proximitySensor, 2 * 1000 * 1000);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(proximitySensorListener);
+    }
+
 
 
 

@@ -4,13 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/drawable/button_bg.xml" value="0.152" />
+        <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/drawable/shape_text.xml" value="0.18" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/drawable/splash.xml" value="0.24" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/font/poppins.xml" value="0.2814814814814815" />
-        <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_ana.xml" value="0.264" />
+        <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_ana.xml" value="0.2" />
+        <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_anita.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_find.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_finder.xml" value="0.2" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_loginanimacion.xml" value="0.264" />
+        <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_luisa.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_registrar.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_scrolling.xml" value="0.27447916666666666" />
@@ -19,6 +22,7 @@
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_scrolling3.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_scrolling4.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/activity_splash.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/brigh/AndroidStudioProjects/Finder_Brigith/app/src/main/res/layout/fragment_maps.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

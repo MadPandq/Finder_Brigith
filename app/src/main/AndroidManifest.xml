@@ -8,6 +8,9 @@
         android:required="true" />
     <uses-feature android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-feature android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Finder_Brigith"
         tools:targetApi="31">
-
+        <activity
+            android:name=".AnitaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LuisaActivity"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
